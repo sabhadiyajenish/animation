@@ -141,7 +141,7 @@ function NavList() {
   return (
     <List className="mb-6 mt-4 p-0 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1">
       <motion.div
-        className="card flex"
+        className="card md:flex"
         initial={{ opacity: 1, y: -30 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 1 }}

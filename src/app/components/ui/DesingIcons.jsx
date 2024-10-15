@@ -26,7 +26,7 @@ const DesingIcons = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }} // Only animate once
         >
-          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 md:mt-0 sm:mt-10 mt-20 z-0">
+          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 md:mt-0 sm:mt-10 mt-5  z-0">
             <h2 className="bg-clip-text dark:text-white text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
               Indian Airlines, <br /> Sajana Textiles.
             </h2>
