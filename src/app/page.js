@@ -1,12 +1,6 @@
 import BasicSpeedDial from "./components/materialCom/speedDial";
 import DesingIcons from "./components/ui/DesingIcons";
 import dynamic from "next/dynamic";
-const LazyRadialGradient = dynamic(
-  () => import("./components/ui/RadialGradient"),
-  {
-    ssr: false, // This disables server-side rendering for the component
-  }
-);
 export default function Home() {
   return (
     <>
