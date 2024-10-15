@@ -232,7 +232,7 @@ export function NavbarMain() {
   return (
     <div className="flex justify-center w-full dark:bg-black z-20 ">
       <Navbar
-        className={`mx-auto max-w-screen-2xl px-4 py-2 md:rounded-lg fixed top-0 w-full transition-transform duration-300 ${
+        className={`mx-auto max-w-screen-2xl px-4 py-2 md:rounded-lg fixed top-0 w-full transition-transform duration-300 z-20 ${
           scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
         } dark:bg-black rounded-none border-none bg-white shadow-none`}
       >

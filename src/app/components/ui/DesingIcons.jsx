@@ -18,7 +18,7 @@ const DesingIcons = () => {
   };
   return (
     <div className="w-full flex flex-wrap justify-center items-center">
-      <div className="md:w-1/2 w-full mt-20 flex justify-start">
+      <div className="md:w-1/2 w-full mt-20 flex justify-start z-0">
         <motion.div
           className="card "
           initial={{ opacity: 1, y: -100 }}
