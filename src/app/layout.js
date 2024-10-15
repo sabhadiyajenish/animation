@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { NavbarMain } from "./components/Navbar";
+import { ScrollProgress } from "./components/ui/ScrollProgress";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +25,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollProgress
+          position={"left"}
+          color={"#189AB4"}
+          height={10}
+          smoothness={true}
+        />
+        <NavbarMain />
         {children}
       </body>
     </html>
