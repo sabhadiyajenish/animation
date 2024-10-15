@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
-import { BackgroundLines } from "./background-lines";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { BackgroundLines } from "./background-lines";
 const DesingIcons = () => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },

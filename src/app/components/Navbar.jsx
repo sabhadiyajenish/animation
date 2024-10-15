@@ -20,7 +20,7 @@ import {
   ChevronUpIcon,
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import useScrollDirection from "@/app/components/ui/useScrollDirection";
+import useScrollDirection from "../components/ui/useScrollDirection";
 
 const nestedMenuItems = [
   {
