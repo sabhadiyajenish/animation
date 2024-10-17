@@ -27,12 +27,17 @@ export default function BasicSpeedDial() {
         transition={{ duration: 1.5 }}
         viewport={{ once: true }} // Only animate once
       >
-        <SpeedDial ariaLabel="SpeedDial basic example" icon={<SpeedDialIcon />}>
+        <SpeedDial
+          className="z-10"
+          ariaLabel="SpeedDial basic example"
+          icon={<SpeedDialIcon />}
+        >
           {actions.map((action) => (
             <SpeedDialAction
               key={action.name}
               icon={action.icon}
               tooltipTitle={action.name}
+              className="z-10"
             />
           ))}
         </SpeedDial>

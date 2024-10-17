@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Progress } from "@material-tailwind/react";
 import Image from "next/image";
-import { Radio } from "@material-tailwind/react";
+import { Radio, Typography } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 
 const QuestionsForm = () => {
@@ -262,13 +262,28 @@ const QuestionsForm = () => {
                     <div className="flex flex-col mt-[39px] ml-[28px]">
                       <Radio
                         name={`answer-${currentQuestionIndex}`}
-                        label="ja"
+                        // color=""
+                        label={
+                          <Typography
+                            color="blue-gray"
+                            className="flex font-medium text-blue-gray-500 dark:text-white"
+                          >
+                            ja
+                          </Typography>
+                        }
                         checked={answers[currentQuestionIndex] === "ja"}
                         onChange={() => handleAnswerChange("ja")}
                       />
                       <Radio
                         name={`answer-${currentQuestionIndex}`}
-                        label="nein"
+                        label={
+                          <Typography
+                            color="blue-gray"
+                            className="flex font-medium text-blue-gray-500 dark:text-white"
+                          >
+                            nein
+                          </Typography>
+                        }
                         checked={answers[currentQuestionIndex] === "nein"}
                         onChange={() => handleAnswerChange("nein")}
                       />
@@ -276,7 +291,7 @@ const QuestionsForm = () => {
                     <div className="mt-[43px] flex gap-x-4 ml-[28px]">
                       <Button
                         variant="text"
-                        className="bg-[#E6E6E6]"
+                        className="bg-[#E6E6E6] dark:text-black dark:bg-yellow-100"
                         onClick={handlePrev}
                         disabled={currentQuestionIndex === 0} // Disable "Zurück" on first question
                       >
@@ -286,6 +301,7 @@ const QuestionsForm = () => {
                       {currentQuestionIndex === totalQuestions - 1 ? (
                         <Button
                           variant="gradient"
+                          className="dark:text-white"
                           onClick={handleSubmit}
                           disabled={answers[currentQuestionIndex] === null} // Disable if no answer selected
                         >
