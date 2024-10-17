@@ -1,6 +1,7 @@
 import BasicSpeedDial from "./components/materialCom/speedDial";
 import DesingIcons from "./components/ui/DesingIcons";
 import dynamic from "next/dynamic";
+import QuetionsForm from "./components/materialCom/quetionsform";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,9 @@ export default function Home() {
           <DesingIcons />
           <BasicSpeedDial />
           {/* </div> */}
+          <div>
+            <QuetionsForm />
+          </div>
         </div>
       </div>
     </>
