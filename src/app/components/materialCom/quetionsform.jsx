@@ -214,7 +214,7 @@ const QuestionsForm = () => {
         <div className="container mx-auto">
           {!submitted ? (
             <>
-              <div className="flex w-full flex-col gap-4 md:mt-0 mt-5 md:px-0 px-3">
+              <div className="flex w-full flex-col gap-4 md:mt-0 mt-5 md:px-0 px-3 ">
                 {/* Progress bar */}
                 {/* <Progress
                   value={progressValue}
@@ -226,9 +226,9 @@ const QuestionsForm = () => {
                     className: "text-white font-semibold text-end",
                   }}
                 /> */}
-                <div className="relative w-full h-4 bg-gray-200 rounded-full ">
+                <div className="relative w-full h-4 bg-gray-200 rounded-full Z-0">
                   <div
-                    className="absolute top-0 left-0 h-4 bg-gray-700 rounded-full transition-all duration-500 ease-in-out"
+                    className="absolute top-0 left-0 h-4 bg-gray-700 dark:bg-red-300 rounded-full transition-all duration-500 ease-in-out"
                     style={{ width: `${progressValue}%` }}
                   >
                     <span className="absolute right-2 top-0 text-white text-xs font-semibold">
@@ -243,7 +243,7 @@ const QuestionsForm = () => {
                   <div>
                     <Image
                       src={`/images/queImag1.png`}
-                      className="md:w-[579px] w-[340px] md:h-[366px] h-full object-cover"
+                      className="md:w-[579px] w-[320px] md:h-[366px] h-full object-cover"
                       alt={"queImag1"}
                       height={0}
                       width={0}
@@ -251,7 +251,7 @@ const QuestionsForm = () => {
                     />
                   </div>
                   <div className="md:mt-0 mt-10 md:px-0 mx-3">
-                    <div className="bg-[#273646] p-5 rounded-2xl md:w-[790px] w-full">
+                    <div className="bg-[#273646] p-5 rounded-2xl md:w-[790px] w-full min-w-[320px]">
                       <p className="text-[#FFFFFF] font-normal text-[14px] text-start">
                         {currentQuestionIndex + 1}. Frage
                       </p>
