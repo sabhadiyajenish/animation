@@ -243,7 +243,7 @@ const QuestionsForm = () => {
                   <div>
                     <Image
                       src={`/images/queImag1.png`}
-                      className="md:w-[579px] w-full md:h-[366px] h-full object-cover"
+                      className="md:w-[579px] w-[340px] md:h-[366px] h-full object-cover"
                       alt={"queImag1"}
                       height={0}
                       width={0}
