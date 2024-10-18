@@ -12,7 +12,7 @@ export default function Home() {
           {/* <div> */}
 
           {/* <LazyRadialGradient
-            opacity={"opacity-40"}
+            opacity={"opacity-40"}    
             scale="scale-y-100"
             position="-top-24"
           /> */}
