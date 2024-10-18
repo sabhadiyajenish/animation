@@ -2,6 +2,18 @@
 import { motion } from "framer-motion";
 import { BackgroundLines } from "./background-lines";
 import { useEffect } from "react";
+
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
+}
 const DesingIcons = () => {
   useEffect(() => {
     const sendHeightToParent = () => {
@@ -9,15 +21,17 @@ const DesingIcons = () => {
       window.parent.postMessage(height, "*"); // Send height to the parent window
     };
 
+    const debouncedSendHeight = debounce(sendHeightToParent, 200); // Debounce the function
+
     // Send the height when the content is fully loaded
     sendHeightToParent();
 
-    // Update the height when the window is resized
-    window.addEventListener("resize", sendHeightToParent);
+    // Add the resize event listener, debounced
+    window.addEventListener("resize", debouncedSendHeight);
 
-    // Cleanup the event listener on unmount
+    // Cleanup event listener on unmount
     return () => {
-      window.removeEventListener("resize", sendHeightToParent);
+      window.removeEventListener("resize", debouncedSendHeight);
     };
   }, []);
   const draw = {
