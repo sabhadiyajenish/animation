@@ -1,7 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
 import { BackgroundLines } from "./background-lines";
+import { useEffect } from "react";
 const DesingIcons = () => {
+  useEffect(() => {
+    const sendHeightToParent = () => {
+      const height = document.documentElement.scrollHeight;
+      window.parent.postMessage(height, "*"); // Send height to the parent window
+    };
+
+    // Send the height when the content is fully loaded
+    sendHeightToParent();
+
+    // Update the height when the window is resized
+    window.addEventListener("resize", sendHeightToParent);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("resize", sendHeightToParent);
+    };
+  }, []);
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i) => {
