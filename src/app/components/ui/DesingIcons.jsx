@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { BackgroundLines } from "./background-lines";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function debounce(fn, delay) {
   let timeoutId;
@@ -15,10 +15,17 @@ function debounce(fn, delay) {
   };
 }
 const DesingIcons = () => {
+  const [previousHeight, setPreviousHeight] = useState(0);
+
   useEffect(() => {
     const sendHeightToParent = () => {
       const height = document.documentElement.scrollHeight;
-      window.parent.postMessage(height, "*"); // Send height to the parent window
+
+      // Only send the height if it has changed
+      if (height !== previousHeight) {
+        window.parent.postMessage(height, "*"); // Send height to the parent window
+        setPreviousHeight(height); // Update the previous height state
+      }
     };
 
     const debouncedSendHeight = debounce(sendHeightToParent, 200); // Debounce the function
@@ -33,7 +40,7 @@ const DesingIcons = () => {
     return () => {
       window.removeEventListener("resize", debouncedSendHeight);
     };
-  }, []);
+  }, [previousHeight]);
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i) => {
