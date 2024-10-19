@@ -162,8 +162,8 @@ export function GalleryWithTab() {
   ];
 
   return (
-    <Tabs value="html" className=" container mx-auto pb-10">
-      <TabsHeader>
+    <Tabs value="html" className=" container mx-auto pb-10 z-0">
+      <TabsHeader className="">
         {data.map(({ label, value }) => (
           <Tab key={value} value={value}>
             {label}
@@ -173,14 +173,14 @@ export function GalleryWithTab() {
       <TabsBody className="grid grid-cols-1 gap-4 ">
         {data.map(({ value, images }) => (
           <TabPanel
-            className="grid grid-cols-2 gap-4 md:grid-cols-3"
+            className="grid grid-cols-2 gap-4 md:grid-cols-3 z-0"
             key={value}
             value={value}
           >
             {images?.map(({ imageLink }, index) => (
-              <div key={index}>
+              <div key={index} className="z-0">
                 <img
-                  className="h-40 w-full max-w-full rounded-lg object-cover object-center"
+                  className="h-40 w-full max-w-full rounded-lg object-cover object-center z-0"
                   src={imageLink}
                   alt="image-photo"
                 />

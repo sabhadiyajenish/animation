@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import QuetionsForm from "./components/materialCom/quetionsform";
 import { GalleryWithTab } from "./components/materialCom/tabbar";
 import { StepperWithContent } from "./components/materialCom/stepperCom";
+import { FloatingDockDemo } from "../app/components/materialCom/mobileTabBar";
 export default function Home() {
   return (
     <>
@@ -17,17 +18,20 @@ export default function Home() {
             position="-top-24"
           /> */}
           <DesingIcons />
-          <BasicSpeedDial />
+          {/* <BasicSpeedDial /> */}
           {/* </div> */}
-          <div className="md:w-[720px] w-full mx-auto mt-20 md:pb-20 pb-10">
-            <StepperWithContent />
+          <div className="mt-16">
+            <FloatingDockDemo />
           </div>
           <div>
             <QuetionsForm />
           </div>
         </div>
-        <div className="mt-10  w-full dark:bg-black">
+        <div className="mt-10 px-2  w-full dark:bg-black">
           <GalleryWithTab />
+        </div>
+        <div className="md:w-[720px] w-full mx-auto mt-20 md:pb-20 pb-10">
+          <StepperWithContent />
         </div>
       </div>
     </>

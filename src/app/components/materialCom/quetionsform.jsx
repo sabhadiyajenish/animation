@@ -226,9 +226,9 @@ const QuestionsForm = () => {
                     className: "text-white font-semibold text-end",
                   }}
                 /> */}
-                <div className="relative w-full h-4 bg-gray-200 rounded-full Z-0">
+                <div className="relative w-full h-4 bg-gray-200 rounded-full -z-0">
                   <div
-                    className="absolute top-0 left-0 h-4 bg-gray-700 dark:bg-red-300 rounded-full transition-all duration-500 ease-in-out"
+                    className="absolute top-0 left-0 h-4 bg-gray-700 dark:bg-red-300 rounded-full transition-all duration-500 ease-in-out "
                     style={{ width: `${progressValue}%` }}
                   >
                     <span className="absolute right-2 top-0 text-white text-xs font-semibold">

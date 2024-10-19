@@ -33,7 +33,9 @@ export default function RootLayout({ children }) {
           smoothness={true}
         />
         <NavbarMain />
+
         {children}
+
         <FooterSection />
       </body>
     </html>
