@@ -20,7 +20,7 @@ export default function Home() {
           <DesingIcons />
           {/* <BasicSpeedDial /> */}
           {/* </div> */}
-          <div className="">
+          <div className=" fixed z-40 mt-[-5rem]">
             <FloatingDockDemo />
           </div>
           <div>
