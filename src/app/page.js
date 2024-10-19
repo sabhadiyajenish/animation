@@ -20,7 +20,7 @@ export default function Home() {
           <DesingIcons />
           {/* <BasicSpeedDial /> */}
           {/* </div> */}
-          <div className="mt-16">
+          <div className="mt-[-5rem]">
             <FloatingDockDemo />
           </div>
           <div>
