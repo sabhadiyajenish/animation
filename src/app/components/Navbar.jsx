@@ -21,6 +21,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import useScrollDirection from "../components/ui/useScrollDirection";
+import { FloatingDockDemo } from "./materialCom/mobileTabBar";
 
 const nestedMenuItems = [
   {
@@ -311,6 +312,9 @@ export function NavbarMain() {
           </div>
         </Collapse>
       </Navbar>
+      <div className="max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue pb-16 text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]">
+        <FloatingDockDemo />
+      </div>
     </div>
   );
 }

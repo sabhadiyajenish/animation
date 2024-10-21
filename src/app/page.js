@@ -18,11 +18,9 @@ export default function Home() {
             position="-top-24"
           /> */}
           <DesingIcons />
-          {/* <BasicSpeedDial /> */}
+          <BasicSpeedDial />
           {/* </div> */}
-          <div className=" fixed z-40 mt-[-5rem]">
-            <FloatingDockDemo />
-          </div>
+
           <div>
             <QuetionsForm />
           </div>
