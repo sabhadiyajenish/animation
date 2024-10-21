@@ -150,7 +150,7 @@ export function ExpandablecolCardDemo() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 dark:text-white  text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
