@@ -4,7 +4,9 @@ import dynamic from "next/dynamic";
 import QuetionsForm from "./components/materialCom/quetionsform";
 import { GalleryWithTab } from "./components/materialCom/tabbar";
 import { StepperWithContent } from "./components/materialCom/stepperCom";
-import { FloatingDockDemo } from "../app/components/materialCom/mobileTabBar";
+import { ExpandableCardDemo } from "../app/components/materialCom/expandableCard";
+import { ExpandablecolCardDemo } from "../app/components/materialCom/expandzablecolCard";
+
 export default function Home() {
   return (
     <>
@@ -19,7 +21,10 @@ export default function Home() {
           /> */}
           <DesingIcons />
           <BasicSpeedDial />
-
+          {/* </div> */}
+          {/* <div className=" fixed z-40 mt-[-5rem]">
+            <FloatingDockDemo />
+          </div> */}
           <div>
             <QuetionsForm />
           </div>
@@ -29,6 +34,10 @@ export default function Home() {
         </div>
         <div className="md:w-[720px] w-full mx-auto mt-20 md:pb-20 pb-10">
           <StepperWithContent />
+        </div>
+        <div className=" container mx-auto flex ">
+          <ExpandableCardDemo />
+          <ExpandablecolCardDemo />
         </div>
       </div>
     </>
