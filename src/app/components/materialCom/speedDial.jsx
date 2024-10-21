@@ -19,7 +19,7 @@ const actions = [
 
 export default function BasicSpeedDial() {
   return (
-    <Box className="fixed bottom-10 right-10 z-50">
+    <Box className="fixed md:bottom-10 bottom-20 md:right-10 right-3 z-50 ">
       <motion.div
         className="card flex"
         initial={{ opacity: 1, y: -300 }}

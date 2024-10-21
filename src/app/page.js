@@ -18,8 +18,7 @@ export default function Home() {
             position="-top-24"
           /> */}
           <DesingIcons />
-          {/* <BasicSpeedDial /> */}
-          {/* </div> */}
+          <BasicSpeedDial />
 
           <div>
             <QuetionsForm />
