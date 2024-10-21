@@ -13,14 +13,6 @@ import Image from "next/image";
 
 export function FloatingDockDemo() {
   const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
     // {
     //   title: "Products",
     //   icon: (
@@ -44,6 +36,13 @@ export function FloatingDockDemo() {
           height={20}
           alt="Aceternity Logo"
         />
+      ),
+      href: "#",
+    },
+    {
+      title: "Home",
+      icon: (
+        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
@@ -71,7 +70,7 @@ export function FloatingDockDemo() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[4rem] bg-black fixed z-40  w-full">
+    <div className="flex items-center justify-center h-[4rem] dark:bg-black  fixed z-40  w-full">
       <FloatingDock
         // only for demo, remove for production
         mobileClassName="translate-y-20"
